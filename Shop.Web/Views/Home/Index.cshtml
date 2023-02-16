@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <style>
+        html {
+            overflow: hidden;
+        }
+        body {
+            background: url('https://imgur.com/L0IZyuC.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .main {
+            height: 90vh;
+            width: 100vw;
+        }
+        @@media only screen and (max-width: 991.5px) {
+            body {
+                background: none;
+            }
+            .slogan{
+                text-align: center;
+            }
+            .p-resize {
+                text-align: center;
+                font-size: 20px;
+            }
+            .view-products-btn {
+                display: flex;
+                justify-content: center;
+            }
+    </style>
+</head>
+
+<div class="container-fluid d-flex h-100">
+    <div class="main">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-lg-4">
+                <h1 class="mb-3 slogan">One Stop Tech eCommerce Shop!</h1>
+                <p class="p-resize">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin imperdiet nunc nibh, in scelerisque risus bibendum nec.</p>
+                <a class="btn btn-danger btn-lg view-products-btn" asp-area="" asp-controller="Products" asp-action="Index">View Products</a>
+            </div>
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4"></div>
+        </div>
+    </div>
+</div>
